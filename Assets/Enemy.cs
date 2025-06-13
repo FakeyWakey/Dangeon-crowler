@@ -1,10 +1,15 @@
 using System;
 using UnityEngine;
 
-
-
-public class Enemy_base : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+
     // Public variables (accessible in the Unity Inspector)
     public float moveSpeed = 2f;
     public float attackRange = 2f;
@@ -80,5 +85,3 @@ public class Enemy_base : MonoBehaviour
         Destroy(gameObject);
     }
 }
-      
-// enemy patrols the area in x radious -> if player is in radious -> follow player

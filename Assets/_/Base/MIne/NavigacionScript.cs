@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class NavigacionScript : MonoBehaviour
 {
     public Transform enemy;
-    private NavMeshAgent test;
+    private NavMeshAgent agent;
 
     
     void Start()
