@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
 
 
-    public void DamageHealth()
+    public void DamageHealth(float damage)
     {
         if (currentHealth > 0)
         {

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -12,6 +13,13 @@ public class Enemy_base : MonoBehaviour
     public Transform player; // Reference to Alan
     public float attackCooldown = 3f;
     // set radious if enemy sees player  
+    private class PlayerHealth
+    {
+        internal void TakeDamage(float attackDamage)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     // Private variables
     private float nextAttackTime = 1f; // Time when the enemy can attack again
