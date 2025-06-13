@@ -1222,8 +1222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 0}
+  currentHealth: 100
+  healthSlider: {fileID: 1871112153}
   fillImage: {fileID: 0}
   healthyColor: {r: 0, g: 1, b: 0, a: 1}
   warningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -1906,6 +1906,17 @@ MonoBehaviour:
   healthyColor: {r: 0, g: 1, b: 0, a: 1}
   warningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   dangerColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &1871112153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6727437867029817893, guid: e1ce98755f34b8245aac1119cc6a8392, type: 3}
+  m_PrefabInstance: {fileID: 8981693262452756048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1924504078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2028,7 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2be915bff0a144cb86aa13108bdec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 35
 --- !u!1001 &8981693262452756048
 PrefabInstance:
   m_ObjectHideFlags: 0
