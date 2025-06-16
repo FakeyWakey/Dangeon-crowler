@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d62cf5eb4cd9164b948578be241475d, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  itemName: HealthPiotn
+  itemName: Health Potion
   description: +20 Health
   icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
   maxStackSize: 5
-  value: 0
+  value: 1
