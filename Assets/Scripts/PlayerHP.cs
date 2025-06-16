@@ -7,16 +7,27 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public Slider healthSlider;
-    public Image fillImage; 
+    public Image fillImage;
+    public Text currentHealthText;
 
     public Color healthyColor = Color.green;
     public Color warningColor = Color.yellow;
     public Color dangerColor = Color.red;
 
+    public static PlayerHealth Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthUI();
+
+        if (currentHealthText != null)
+            currentHealthText.text = $"HP: {currentHealth}";
     }
 
     void Update()
@@ -39,13 +50,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void IncreaseHealth(int value)
+    {
+        currentHealth += value;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthUI();
+
+        if (currentHealthText != null)
+            currentHealthText.text = $"HP: {currentHealth}";
+    }
+
     void UpdateHealthUI()
     {
         float healthPercent = (float)currentHealth / maxHealth;
         if (healthSlider != null)
-        {
             healthSlider.value = healthPercent;
-        }
 
         if (fillImage != null)
         {

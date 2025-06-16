@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using TMPro;           // <- dodajemy namespace dla TextMeshPro
+using TMPro;           // Namespace dla TextMeshPro
 using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
@@ -38,6 +38,17 @@ public class InventoryManager : MonoBehaviour
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
 
+            // Pobierz InventoryItemController i przypisz item
+            InventoryItemController controller = obj.GetComponent<InventoryItemController>();
+            if (controller != null)
+            {
+                controller.AddItem(item);
+            }
+            else
+            {
+                Debug.LogError("Prefab InventoryItem nie ma komponentu InventoryItemController!");
+            }
+
             Transform nameTransform = obj.transform.Find("ItemName");
             Transform iconTransform = obj.transform.Find("ItemIcon");
 
@@ -47,7 +58,6 @@ public class InventoryManager : MonoBehaviour
                 continue;
             }
 
-            // Pobieramy komponent TMP_Text zamiast klasycznego Text
             TMP_Text itemName = nameTransform.GetComponent<TMP_Text>();
             Image itemIcon = iconTransform.GetComponent<Image>();
 
