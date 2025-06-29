@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -103,5 +104,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("RestartGame clicked");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    internal void TakeDamage(float attackDamage)
+    {
+        throw new NotImplementedException();
     }
 }
