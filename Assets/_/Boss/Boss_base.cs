@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Boss_base : MonoBehaviour
 { // Public variables (accessible in the Unity Inspector)
-    public float moveSpeed = 3f;
+    public float moveSpeed = 0.1f;
     public float attackRange = 3f;
     public float attackDamage = 30f;
     public float health = 100f;

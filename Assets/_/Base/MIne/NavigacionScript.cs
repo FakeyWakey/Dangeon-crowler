@@ -21,7 +21,7 @@ public class NavigacionScript : MonoBehaviour
     void Update()
     {
         agent.destination = PatrolPoints[PatrolPointCounter].position;
-        if (Vector3.Distance(transform.position, agent.destination)<1f ) //jeœli jest 0.1 away from the point zalicza punkt
+        if (Vector3.Distance(transform.position, agent.destination)< 1f) //jeœli jest 0.1 away from the point zalicza punkt
         {
             PatrolPointCounter++;
             if (PatrolPointCounter >= PatrolPoints.Count)
