@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,5 +62,10 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Gracz zgin¹³!");
+    }
+
+    internal void TakeDamage(float attackDamage)
+    {
+        throw new NotImplementedException();
     }
 }
