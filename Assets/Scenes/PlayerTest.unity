@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 13
-  attackRange: 2
+  attackRange: 20
   attackDamage: 25
   enemyHealth: 100
   attackCooldown: 0.5
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 13
-  attackRange: 2
+  attackRange: 20
   attackDamage: 25
   enemyHealth: 100
   attackCooldown: 0.5
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 13
-  attackRange: 2
+  attackRange: 20
   attackDamage: 25
   enemyHealth: 100
   attackCooldown: 0.5
