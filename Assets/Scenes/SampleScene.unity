@@ -322,7 +322,7 @@ MonoBehaviour:
   attackDamage: 10
   enemyHealth: 100
   attackCooldown: 3
-  player: {fileID: 0}
+  player: {fileID: 1002070813}
 --- !u!114 &62500538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   damage: 10
 --- !u!114 &62500540
 MonoBehaviour:
@@ -372,7 +372,7 @@ MonoBehaviour:
   attackRange: 2
   attackDamage: 10
   health: 100
-  player: {fileID: 0}
+  player: {fileID: 1002070813}
   attackCooldown: 3
   detectionRadius: 10
   waypoints: []
@@ -1612,6 +1612,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1928940686}
+    - target: {fileID: 1105858551292850609, guid: e1ce98755f34b8245aac1119cc6a8392, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1105858551292850609, guid: e1ce98755f34b8245aac1119cc6a8392, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
