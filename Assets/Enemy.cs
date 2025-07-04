@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 2f;
     public float attackRange = 2f;
     public float attackDamage = 10f;
-    public float enemyHealth = 100f;
+    public float enemyHealth = 10f;
     public float attackCooldown = 3f;
     public Transform player;
 

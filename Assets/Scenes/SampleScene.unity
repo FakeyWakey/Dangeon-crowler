@@ -303,12 +303,10 @@ GameObject:
   - component: {fileID: 62500534}
   - component: {fileID: 62500533}
   - component: {fileID: 62500532}
-  - component: {fileID: 62500537}
   - component: {fileID: 62500540}
   - component: {fileID: 62500539}
   - component: {fileID: 62500538}
   - component: {fileID: 62500541}
-  - component: {fileID: 62500542}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -432,24 +430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &62500537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62500531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
 --- !u!114 &62500538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,9 +460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &62500540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,12 +475,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!195 &62500541
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -523,24 +503,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
---- !u!114 &62500542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62500531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!1 &82647484
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,12 +516,10 @@ GameObject:
   - component: {fileID: 82647493}
   - component: {fileID: 82647492}
   - component: {fileID: 82647491}
-  - component: {fileID: 82647490}
   - component: {fileID: 82647489}
   - component: {fileID: 82647488}
   - component: {fileID: 82647487}
   - component: {fileID: 82647486}
-  - component: {fileID: 82647485}
   m_Layer: 6
   m_Name: Enemy 7
   m_TagString: Enemy
@@ -567,24 +527,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &82647485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82647484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &82647486
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -637,9 +579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &82647489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,30 +594,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &82647490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82647484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &82647491
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -815,13 +739,13 @@ GameObject:
   - component: {fileID: 96900247}
   - component: {fileID: 96900246}
   - component: {fileID: 96900245}
-  - component: {fileID: 96900251}
+  - component: {fileID: 96900253}
   - component: {fileID: 96900250}
   - component: {fileID: 96900249}
   - component: {fileID: 96900252}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -929,12 +853,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722531ad7c6db8840b8cb3632dfffb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   PatrolPoints:
   - {fileID: 724409497}
   - {fileID: 755012917}
   - {fileID: 1931275650}
-  PatrolPointCounter: 0
 --- !u!114 &96900250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,24 +872,6 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   maxDropCount: 5
   xpPrefab: {fileID: 0}
---- !u!114 &96900251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96900244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7bd37005d14f3a43b75c6a378d4ca3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  attackRange: 3
-  attackDamage: 30
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &96900252
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -990,6 +894,24 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &96900253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96900244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 5
+  attackDamage: 2
+  health: 100
+  attackCooldown: 3
+  detectionRange: 10
+  player: {fileID: 1002070813}
 --- !u!1 &113459107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,12 +1550,10 @@ GameObject:
   - component: {fileID: 356868461}
   - component: {fileID: 356868460}
   - component: {fileID: 356868459}
-  - component: {fileID: 356868458}
   - component: {fileID: 356868457}
   - component: {fileID: 356868456}
   - component: {fileID: 356868455}
   - component: {fileID: 356868454}
-  - component: {fileID: 356868453}
   m_Layer: 6
   m_Name: Enemy 6
   m_TagString: Enemy
@@ -1641,24 +1561,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &356868453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356868452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &356868454
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1711,9 +1613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &356868457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,30 +1628,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &356868458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356868452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &356868459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1879,12 +1763,10 @@ GameObject:
   - component: {fileID: 369949380}
   - component: {fileID: 369949379}
   - component: {fileID: 369949378}
-  - component: {fileID: 369949377}
   - component: {fileID: 369949376}
   - component: {fileID: 369949375}
   - component: {fileID: 369949374}
   - component: {fileID: 369949373}
-  - component: {fileID: 369949372}
   m_Layer: 6
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -1892,24 +1774,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &369949372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369949371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &369949373
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1962,9 +1826,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &369949376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1977,30 +1841,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &369949377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369949371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &369949378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2562,12 +2408,10 @@ GameObject:
   - component: {fileID: 687665290}
   - component: {fileID: 687665289}
   - component: {fileID: 687665288}
-  - component: {fileID: 687665287}
   - component: {fileID: 687665286}
   - component: {fileID: 687665285}
   - component: {fileID: 687665284}
   - component: {fileID: 687665283}
-  - component: {fileID: 687665282}
   m_Layer: 6
   m_Name: Enemy 3
   m_TagString: Enemy
@@ -2575,24 +2419,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &687665282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687665281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &687665283
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2645,9 +2471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &687665286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2660,30 +2486,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &687665287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687665281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &687665288
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2903,12 +2711,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
   attackDamage: 10
   health: 100
-  player: {fileID: 0}
   attackCooldown: 3
+  detectionRange: 10
+  player: {fileID: 0}
 --- !u!195 &704422843
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2976,12 +2784,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
   attackDamage: 10
   health: 100
-  player: {fileID: 0}
   attackCooldown: 3
+  detectionRange: 10
+  player: {fileID: 0}
 --- !u!114 &704422847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3014,7 @@ Transform:
   m_GameObject: {fileID: 724409496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.044, y: 48.1, z: 4.251}
+  m_LocalPosition: {x: 93.044, y: 48.1, z: 3.55}
   m_LocalScale: {x: 0.24339, y: 0.24339, z: 0.24339}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3271,7 +3079,7 @@ Transform:
   m_GameObject: {fileID: 755012916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 91.838, y: 48.1, z: 6.551}
+  m_LocalPosition: {x: 91.13, y: 48.1, z: 7.39}
   m_LocalScale: {x: 0.24339, y: 0.24339, z: 0.24339}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3835,12 +3643,10 @@ GameObject:
   - component: {fileID: 896071378}
   - component: {fileID: 896071377}
   - component: {fileID: 896071376}
-  - component: {fileID: 896071375}
   - component: {fileID: 896071374}
   - component: {fileID: 896071373}
   - component: {fileID: 896071372}
   - component: {fileID: 896071371}
-  - component: {fileID: 896071370}
   m_Layer: 6
   m_Name: Enemy 8
   m_TagString: Enemy
@@ -3848,24 +3654,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &896071370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896071369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &896071371
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3918,9 +3706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &896071374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,30 +3721,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &896071375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896071369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &896071376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4086,12 +3856,10 @@ GameObject:
   - component: {fileID: 907827199}
   - component: {fileID: 907827198}
   - component: {fileID: 907827197}
-  - component: {fileID: 907827196}
   - component: {fileID: 907827195}
   - component: {fileID: 907827194}
   - component: {fileID: 907827193}
   - component: {fileID: 907827192}
-  - component: {fileID: 907827191}
   m_Layer: 6
   m_Name: Enemy 5
   m_TagString: Enemy
@@ -4099,24 +3867,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &907827191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907827190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &907827192
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4169,9 +3919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &907827195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4184,30 +3934,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &907827196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907827190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &907827197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4337,12 +4069,10 @@ GameObject:
   - component: {fileID: 955897577}
   - component: {fileID: 955897576}
   - component: {fileID: 955897575}
-  - component: {fileID: 955897574}
   - component: {fileID: 955897573}
   - component: {fileID: 955897572}
   - component: {fileID: 955897571}
   - component: {fileID: 955897570}
-  - component: {fileID: 955897569}
   m_Layer: 6
   m_Name: Enemy 13
   m_TagString: Enemy
@@ -4350,24 +4080,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &955897569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955897568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &955897570
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4420,9 +4132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &955897573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4435,30 +4147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &955897574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955897568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &955897575
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4695,12 +4389,10 @@ GameObject:
   - component: {fileID: 976581021}
   - component: {fileID: 976581020}
   - component: {fileID: 976581019}
-  - component: {fileID: 976581018}
   - component: {fileID: 976581017}
   - component: {fileID: 976581016}
   - component: {fileID: 976581015}
   - component: {fileID: 976581014}
-  - component: {fileID: 976581013}
   m_Layer: 6
   m_Name: Enemy 10
   m_TagString: Enemy
@@ -4708,24 +4400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &976581013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976581012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &976581014
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4778,7 +4452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
   damage: 10
 --- !u!114 &976581017
@@ -4793,30 +4467,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &976581018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976581012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &976581019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5356,12 +5012,10 @@ GameObject:
   - component: {fileID: 1144009035}
   - component: {fileID: 1144009034}
   - component: {fileID: 1144009033}
-  - component: {fileID: 1144009032}
   - component: {fileID: 1144009031}
   - component: {fileID: 1144009030}
   - component: {fileID: 1144009029}
   - component: {fileID: 1144009028}
-  - component: {fileID: 1144009027}
   m_Layer: 6
   m_Name: Enemy 4
   m_TagString: Enemy
@@ -5369,24 +5023,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1144009027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144009026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &1144009028
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5439,9 +5075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &1144009031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5454,30 +5090,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &1144009032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144009026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &1144009033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5846,33 +5464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1484531720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1269280658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
-  m_PrefabInstance: {fileID: 1942138485}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1269280662
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269280658}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1550514412580984892, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
 --- !u!1 &1275985636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,37 +5477,17 @@ GameObject:
   - component: {fileID: 1275985645}
   - component: {fileID: 1275985644}
   - component: {fileID: 1275985643}
-  - component: {fileID: 1275985642}
   - component: {fileID: 1275985641}
   - component: {fileID: 1275985640}
   - component: {fileID: 1275985639}
   - component: {fileID: 1275985638}
-  - component: {fileID: 1275985637}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy 9
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1275985637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275985636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &1275985638
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5969,9 +5540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &1275985641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5984,30 +5555,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &1275985642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275985636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &1275985643
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7179,6 +6732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana Man
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7375,12 +6932,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
   attackDamage: 10
   health: 100
-  player: {fileID: 0}
   attackCooldown: 3
+  detectionRange: 10
+  player: {fileID: 0}
 --- !u!195 &1705787460
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7448,12 +7005,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
   attackDamage: 10
   health: 100
-  player: {fileID: 0}
   attackCooldown: 3
+  detectionRange: 10
+  player: {fileID: 0}
 --- !u!114 &1705787464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7864,50 +7421,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 775966296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1802837034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1802837036}
-  - component: {fileID: 1802837035}
-  m_Layer: 0
-  m_Name: Spowner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1802837035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802837034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9041e313a4fb41e4e92c796dc2569e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1802837036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802837034}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3536797, y: -2.3681638, z: 8.88778}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840629262
 GameObject:
   m_ObjectHideFlags: 0
@@ -8092,12 +7605,10 @@ GameObject:
   - component: {fileID: 1899038122}
   - component: {fileID: 1899038121}
   - component: {fileID: 1899038120}
-  - component: {fileID: 1899038119}
   - component: {fileID: 1899038118}
   - component: {fileID: 1899038117}
   - component: {fileID: 1899038116}
   - component: {fileID: 1899038115}
-  - component: {fileID: 1899038114}
   m_Layer: 6
   m_Name: Enemy 12
   m_TagString: Enemy
@@ -8105,24 +7616,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1899038114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899038113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &1899038115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8175,9 +7668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &1899038118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8190,30 +7683,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &1899038119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899038113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &1899038120
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8651,7 +8126,7 @@ Transform:
   m_GameObject: {fileID: 1931275649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 94.09236, y: 48.1, z: 5.952301}
+  m_LocalPosition: {x: 95.56, y: 48.1, z: 5.952301}
   m_LocalScale: {x: 0.24339, y: 0.24339, z: 0.24339}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8742,15 +8217,16 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8416272007918961125, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6649926832043904681}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 594380669}
-    - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1269280662}
   m_SourcePrefab: {fileID: 100100000, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
 --- !u!1 &1944540994
 GameObject:
@@ -8916,6 +8392,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1965368657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1955171055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
+  m_PrefabInstance: {fileID: 1942138485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955473208
 GameObject:
   m_ObjectHideFlags: 0
@@ -9066,12 +8547,10 @@ GameObject:
   - component: {fileID: 1989731742}
   - component: {fileID: 1989731741}
   - component: {fileID: 1989731740}
-  - component: {fileID: 1989731739}
   - component: {fileID: 1989731738}
   - component: {fileID: 1989731737}
   - component: {fileID: 1989731736}
   - component: {fileID: 1989731735}
-  - component: {fileID: 1989731734}
   m_Layer: 6
   m_Name: Enemy 11
   m_TagString: Enemy
@@ -9079,24 +8558,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1989731734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989731733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
-  attackCooldown: 3
 --- !u!195 &1989731735
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9149,9 +8610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad12447c98c664e4a80bc1e04eb40500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  damage: 10
+  damage: 2
 --- !u!114 &1989731738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9164,30 +8625,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63201bc0835051742b62a7024847fb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  health: 100
-  player: {fileID: 0}
+  attackDamage: 2
+  health: 10
   attackCooldown: 3
---- !u!114 &1989731739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989731733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c0733dbc0e314592563c56c9dc33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 2
-  attackDamage: 10
-  enemyHealth: 100
-  attackCooldown: 3
-  player: {fileID: 0}
+  detectionRange: 2
+  player: {fileID: 1002070813}
 --- !u!54 &1989731740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9496,6 +8939,123 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1575448908}
   m_SourcePrefab: {fileID: 100100000, guid: 57e71afe94c8e1e4d9b5a12c31bd1f83, type: 3}
+--- !u!4 &1519598251604945275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188012899095016385}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.84, y: -0.0000009536743, z: -0.1}
+  m_LocalScale: {x: 1.5233, y: 1.5233, z: 1.5233}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2188012899095016385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519598251604945275}
+  m_Layer: 0
+  m_Name: Cube.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!33 &4276805332525293888
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372552288693915509}
+  m_Mesh: {fileID: -1550514412580984892, guid: 2d2be599939b75c4783117919247ff0c, type: 3}
+--- !u!4 &6649926832043904681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372552288693915509}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -12.913515, y: 0, z: 3.609484}
+  m_LocalScale: {x: 30.466002, y: 578.85394, z: 304.65997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1955171055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &7208328614705113437
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372552288693915509}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7372552288693915509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6649926832043904681}
+  - component: {fileID: 4276805332525293888}
+  - component: {fileID: 7208328614705113437}
+  m_Layer: 0
+  m_Name: Cube.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9537,10 +9097,10 @@ SceneRoots:
   - {fileID: 1705787469}
   - {fileID: 2021576685}
   - {fileID: 96900248}
-  - {fileID: 1802837036}
   - {fileID: 1942138485}
   - {fileID: 1975357345}
   - {fileID: 1965368657}
   - {fileID: 1410310142}
   - {fileID: 879222113}
   - {fileID: 1728826548}
+  - {fileID: 1519598251604945275}
