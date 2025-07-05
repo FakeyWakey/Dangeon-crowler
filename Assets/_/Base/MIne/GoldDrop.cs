@@ -8,6 +8,7 @@ public class GoldDrop : MonoBehaviour
 
     public void DropItems()
     {
+        Debug.Log("DropItems() called"); // Add this line
         // Drop 3 XP
         for (int i = 0; i < 3; i++)
         {

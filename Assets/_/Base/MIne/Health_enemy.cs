@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
+    public float maxHealth = 10f;
     public float currentHealth;
 
-    public float damage = 10f;   // to fajnie by³oby gdyby by³¹ zmienna
+    public float damage = 2f;   // to fajnie by³oby gdyby by³¹ zmienna
 
 
     private void Start()

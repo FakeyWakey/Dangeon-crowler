@@ -1,69 +1,69 @@
-using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy_base : MonoBehaviour
 {
-    // Public variables (accessible in the Unity Inspector)
-    public float moveSpeed = 0.1f;
     public float attackRange = 2f;
-    public float attackDamage = 10f;
-    public float health = 100f;
-    public Transform player; // Reference to Alan
+    public float attackDamage = 2f;
+    public float health = 10f;
     public float attackCooldown = 3f;
-    // set radious if enemy sees player  
-    private class PlayerHealth
+    public float detectionRange = 2f; // How far the enemy "sees" the player
+    public Transform player;
+
+    private float nextAttackTime = 0f;
+    private NavMeshAgent agent;
+    private NavigacionScript patrolScript;
+    private GoldDrop goldDrop; // Add reference to GoldDrop
+
+    void Start()
     {
-        internal void TakeDamage(float attackDamage)
-        {
-            throw new NotImplementedException();
-        }
+        agent = GetComponent<NavMeshAgent>();
+        patrolScript = GetComponent<NavigacionScript>();
+        goldDrop = GetComponent<GoldDrop>(); // Initialize the GoldDrop component
     }
 
-    // Private variables
-    private float nextAttackTime = 1f; // Time when the enemy can attack again
-
-    // Function called every frame
     void Update()
     {
-        // Move towards the player
         if (player != null)
         {
-            MoveTowardsPlayer();
-            // Check if the enemy is within attack range and if the attack cooldown is over
-            if (Vector3.Distance(transform.position, player.position) <= attackRange && Time.time >= nextAttackTime)
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            if (distanceToPlayer <= detectionRange)
             {
-                Attack();
+                // Stop patrolling and chase player
+                if (patrolScript != null)
+                    patrolScript.enabled = false;
+
+                agent.SetDestination(player.position);
+
+                // Attack if close enough
+                if (distanceToPlayer <= attackRange && Time.time >= nextAttackTime)
+                {
+                    Attack();
+                }
+            }
+            else
+            {
+                // Player is far away, go back to patrolling
+                if (patrolScript != null && !patrolScript.enabled)
+                {
+                    patrolScript.enabled = true;
+                }
             }
         }
     }
 
-    // Move the enemy towards the player
-    private void MoveTowardsPlayer()
-    {
-        // Calculate the direction towards the player
-        Vector3 direction = (player.position - transform.position).normalized;
-
-        // Move the enemy using the calculated direction and move speed
-        transform.position += direction * moveSpeed * Time.deltaTime;
-
-    }
-
-    // Attack the player
     private void Attack()
     {
-        // Apply damage to the player (requires health)
-        if (player != null)
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
         {
-            player.GetComponent<PlayerHealth>().TakeDamage(attackDamage); // Kod Alana
+            playerHealth.TakeDamage((int)attackDamage);
         }
 
-        // Set the next attack time to allow for a cooldown
         nextAttackTime = Time.time + attackCooldown;
-
     }
 
-
-    // Called when the enemy is hit
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -72,9 +72,14 @@ public class Enemy_base : MonoBehaviour
             Die();
         }
     }
+
     private void Die()
     {
-        // You can add death logic here
+        if (goldDrop != null)
+        {
+            goldDrop.DropItems(); // Drop gold and XP
+        }
+
         Destroy(gameObject);
     }
 }

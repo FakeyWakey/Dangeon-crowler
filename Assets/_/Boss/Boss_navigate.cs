@@ -4,29 +4,30 @@ using UnityEngine.AI;
 
 public class Boss_navigate : MonoBehaviour
 {
-    public Transform enemy;
-    private NavMeshAgent agent;
     public List<Transform> PatrolPoints = new List<Transform>();
-    public int PatrolPointCounter;
+    private int PatrolPointCounter = 0;
+    private NavMeshAgent agent;
 
     void Start()
     {
-
         agent = GetComponent<NavMeshAgent>();
-    }
+        agent.stoppingDistance = 0.1f; // Make sure it's low enough
 
+        if (PatrolPoints.Count > 0)
+            agent.destination = PatrolPoints[PatrolPointCounter].position;
+        else
+            Debug.LogWarning("No patrol points set!");
+    }
 
     void Update()
     {
-        agent.destination = PatrolPoints[PatrolPointCounter].position;
-        if (Vector3.Distance(transform.position, agent.destination) < 2f) //jeœli jest 0.1 away from the point zalicza punkt
-        {
-            PatrolPointCounter++;
-            if (PatrolPointCounter >= PatrolPoints.Count)
-            {
-                PatrolPointCounter = 0;
-            }
-        }
+        if (PatrolPoints.Count == 0 || PatrolPoints[PatrolPointCounter] == null)
+            return;
 
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            PatrolPointCounter = (PatrolPointCounter + 1) % PatrolPoints.Count;
+            agent.destination = PatrolPoints[PatrolPointCounter].position;
+        }
     }
 }
