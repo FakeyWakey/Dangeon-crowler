@@ -13,11 +13,13 @@ public class Enemy_base : MonoBehaviour
     private float nextAttackTime = 0f;
     private NavMeshAgent agent;
     private NavigacionScript patrolScript;
+    private GoldDrop goldDrop; // Add reference to GoldDrop
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         patrolScript = GetComponent<NavigacionScript>();
+        goldDrop = GetComponent<GoldDrop>(); // Initialize the GoldDrop component
     }
 
     void Update()
@@ -73,6 +75,11 @@ public class Enemy_base : MonoBehaviour
 
     private void Die()
     {
+        if (goldDrop != null)
+        {
+            goldDrop.DropItems(); // Drop gold and XP
+        }
+
         Destroy(gameObject);
     }
 }
